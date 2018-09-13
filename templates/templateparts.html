@@ -1,0 +1,46 @@
+<script id="navTpl" type="text/template">
+	<li><a href="{{name}}">{{thisTitle}}</a></li>
+</script>
+<script id="homeTpl" type="text/template">
+	<h1 class="section-heading">{{title}}</h1>
+	<img src="{{image}}" alt="{{image}}"/>
+	<p>{{description}}</p>
+</script>
+<script id="bioTpl" type="text/template">
+	<h1 class="section-heading">{{thisBioHeading}}</h1>
+	<div id="bio-pic-holder">
+	<img id="bio-pic1"/>
+	<img id="bio-pic2"/>
+	</div>
+	<div id="bio-text">{{{thisBioText}}}</div>
+	<ul class="member-list">{{#members}}<li class="member-item"><div class="member-pic-holder"><p class="member-item-name">{{name}}</p><img src="{{thisMemberPhoto}}" alt="{{image}}"/><div class="member-text">{{{thisMemberText}}}</div></div><div style="clear: both;"></div></li>{{/members}}</ul>
+</script>
+<script id="photoTpl" type="text/template">
+	<h1 class="section-heading">{{thisPhotoHeading}}</h1>
+	<ul id="thumb-container">{{#photos}}<li><a href="{{largePhoto}}" title="{{caption }}" alt="{{caption}}"><img src="{{smallPhoto}}" alt="{{caption }}"/></a></li>{{/photos}}</ul>
+</script>
+<script id="audioTpl" type="text/template">
+	<h1 class="section-heading">{{thisAudioHeading}}</h1>
+	<div class="description">{{{thisAudioDescr}}}</div>
+	<ul id="song-container">{{#songs}}<li><a class="song-item" href="#">{{title}}</a></li>{{/songs}}</ul>
+	<p class="song-load-progress-info"></p>
+	<p id="audio-player-holder">
+	<audio controls autoplay id="audio-player">
+	Your browser does not support the audio element.
+	</audio>
+	</p>
+</script>
+<script id="pressTpl" type="text/template">
+	<h1 class="section-heading">{{thisPressHeading}}</h1>
+	<ul>{{#articles}}<li class="press-item"><a href="{{url}}" target="_blank">{{title}}</a><p>{{description}}</p></li>{{/articles}}</ul>
+</script>
+<script id="datesTpl" type="text/template">
+	<h1 class="section-heading">{{thisDatesHeading}}</h1>
+	<ul class="year-item">{{#giglist}}<li class="year-span">{{year}}<ul>{{#dates}}<li class="date-item"><span class="day-span">{{thisDay}}</span><span class="date-span">{{thisDate}}</span><span class="time-span">{{thisTime}}</span><span class="location-span">{{location}}</span><a href="{{url}}" target="_blank">{{{venue}}}</a></li>{{/dates}}</ul></li>{{/giglist}}</ul>
+</script>
+
+<script id="contactTpl" type="text/template">
+	<h1 class="section-heading">{{thisContactHeading}}</h1>
+	<p class="contact-item">{{{tel}}}</p>
+	<p class="contact-item">{{{email}}}</p>
+</script>
